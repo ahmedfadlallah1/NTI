@@ -5,9 +5,9 @@ import joblib
 # Load the model
 kmeans = joblib.load(r"kmeans_model.pkl")
 
-st.title("Customer Segmentation (KMeans)")
+st.title("🎯 Customer Segmentation (KMeans)")
 
-st.write("Enter the following values to find your cluster:")
+st.write("✏️ Enter the following values to find your cluster 📊:")
 
 # User inputs
 fresh = st.number_input("Fresh", min_value=0, step=1)
@@ -23,3 +23,4 @@ if st.button("Predict Cluster"):
     cluster = kmeans.predict(input_data)[0]
 
     st.success(f"You belong to cluster number: {cluster}")
+
