@@ -3,7 +3,7 @@ import numpy as np
 import joblib
 
 # Load the model
-kmeans = joblib.load(r"C:\Users\Mega Store\Videos\ML\last\kmeans_model.pkl")
+kmeans = joblib.load(r"kmeans_model.pkl")
 
 st.title("Customer Segmentation (KMeans)")
 
@@ -21,4 +21,5 @@ if st.button("Predict Cluster"):
     # Prepare data for prediction
     input_data = np.array([[fresh, milk, grocery, frozen, detergents_paper, delicassen]])
     cluster = kmeans.predict(input_data)[0]
+
     st.success(f"You belong to cluster number: {cluster}")
